@@ -33,6 +33,10 @@ public class StudyCafeSeatPass implements StudyCafePass {
                 && lockerPass.isSameDuration(this.duration);
     }
 
+    public int getDiscountPrice() {
+        return (int) (this.price * this.discountRate);
+    }
+
     @Override
     public StudyCafePassType getPassType() {
         return passType;
@@ -46,9 +50,5 @@ public class StudyCafeSeatPass implements StudyCafePass {
     @Override
     public int getPrice() {
         return price;
-    }
-
-    public double getDiscountRate() {
-        return discountRate;
     }
 }
